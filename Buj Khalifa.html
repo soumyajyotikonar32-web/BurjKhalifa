@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burj Khalifa - Floor Details</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: white;
+    }
+
+    header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5') no-repeat center/cover;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+        background: rgba(0,0,0,0.6);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        background: rgba(0,0,0,0.6);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #00c6ff;
+    }
+
+    section {
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.4s, background 0.4s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        background: rgba(255,255,255,0.2);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0,0,0,0.8);
+    }
+
+    button {
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 25px;
+        background: #00c6ff;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #0072ff;
+    }
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#floors">Floors</a>
+    <a href="#facts">Facts</a>
+</nav>
+
+<header>
+    <h1>Burj Khalifa</h1>
+    <p>828 meters | 163 Floors | Dubai, UAE</p>
+    <button onclick="scrollToSection()">Explore Floors</button>
+</header>
+
+<section id="about">
+    <h2>About Burj Khalifa</h2>
+    <p>The tallest building in the world, located in Dubai, United Arab Emirates. 
+       Opened in 2010 and stands at 828 meters high.</p>
+</section>
+
+<section id="floors">
+    <h2>Floor Categories</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>1–8</h3>
+            <p>Armani Hotel, restaurants, lobby.</p>
+        </div>
+        <div class="card">
+            <h3>9–16</h3>
+            <p>Luxury residences.</p>
+        </div>
+        <div class="card">
+            <h3>17–18</h3>
+            <p>Mechanical systems.</p>
+        </div>
+        <div class="card">
+            <h3>19–37</h3>
+            <p>Residential apartments.</p>
+        </div>
+        <div class="card">
+            <h3>38–39</h3>
+            <p>Hotel suites.</p>
+        </div>
+        <div class="card">
+            <h3>40–108</h3>
+            <p>Private residences.</p>
+        </div>
+        <div class="card">
+            <h3>109–154</h3>
+            <p>Corporate offices.</p>
+        </div>
+        <div class="card">
+            <h3>124, 125 & 148</h3>
+            <p>Observation decks.</p>
+        </div>
+        <div class="card">
+            <h3>155–163</h3>
+            <p>Mechanical & service floors.</p>
+        </div>
+    </div>
+</section>
+
+<section id="facts">
+    <h2>Interesting Facts</h2>
+    <p>✔ Tallest building in the world</p>
+    <p>✔ 57 elevators</p>
+    <p>✔ Cost $1.5 billion</p>
+</section>
+
+<footer>
+    <p>Project about Burj Khalifa | Made by Student</p>
+</footer>
+
+<script>
+    function scrollToSection() {
+        document.getElementById("floors").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
+</body>
+</html>
